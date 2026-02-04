@@ -1,0 +1,40 @@
+# Satellite data (large GeoTIFFs)
+*.tif
+*.tif.aux.xml
+*.tiff
+Data/
+S2DR4_Khartoum_1m/
+output/
+
+# Generated outputs
+comparison.html
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
+
+# Windows artifacts
+nul
+Thumbs.db
+Desktop.ini
+
+# OS
+.DS_Store
