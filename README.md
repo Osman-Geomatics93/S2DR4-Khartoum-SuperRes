@@ -4,10 +4,14 @@
 
 **Sentinel-2 Deep Super-Resolution: 10 m &rarr; 1 m/pixel over Khartoum, Sudan**
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Osman-Geomatics93/S2DR4-Khartoum-SuperRes/blob/main/notebooks/S2DR4_Khartoum_SuperRes.ipynb)
+&nbsp;
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Interactive%20Slider-638cff?logo=github&logoColor=white)](https://osman-geomatics93.github.io/S2DR4-Khartoum-SuperRes/)
+
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
-[![Colab](https://img.shields.io/badge/Google%20Colab-T4%20GPU-F9AB00?logo=googlecolab&logoColor=white)](https://colab.research.google.com)
 [![GEE](https://img.shields.io/badge/Google%20Earth%20Engine-4285F4?logo=google-earth&logoColor=white)](https://earthengine.google.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Citation](https://img.shields.io/badge/Cite%20This-CITATION.cff-orange)](CITATION.cff)
 
 </div>
 
@@ -23,7 +27,19 @@ This repository demonstrates a complete **10x super-resolution** workflow for Se
 
 **Area of interest:** 4 &times; 4 km centered on Khartoum, Sudan
 
+> **Try it live:** [Interactive drag-slider comparison](https://osman-geomatics93.github.io/S2DR4-Khartoum-SuperRes/) &mdash; compare RGB, False Color, and NDVI in your browser.
+
 ## Results Gallery
+
+<div align="center">
+
+### Before & After
+
+<img src="results/before_after.gif" alt="Animated before/after comparison" width="400">
+
+<i>500 &times; 500 m crop &mdash; watch the 10x resolution enhancement in action.</i>
+
+</div>
 
 ### Zoom: 10 m vs 1 m
 
@@ -72,7 +88,7 @@ Copy [`gee/sentinel2_download.js`](gee/sentinel2_download.js) into the [GEE Code
 
 ### Step 2 &mdash; Run Super-Resolution
 
-Open [`notebooks/S2DR4_Khartoum_SuperRes.ipynb`](notebooks/S2DR4_Khartoum_SuperRes.ipynb) in Google Colab with a **T4 GPU** runtime and run all cells. Output GeoTIFFs are saved directly to Google Drive.
+Click the **Open in Colab** badge above, or open [`notebooks/S2DR4_Khartoum_SuperRes.ipynb`](notebooks/S2DR4_Khartoum_SuperRes.ipynb) manually. Connect a **T4 GPU** runtime and run all cells. Output GeoTIFFs are saved directly to Google Drive.
 
 ### Step 3 &mdash; Compare & Analyze
 
@@ -102,26 +118,35 @@ python scripts/inspect_data.py
 S2DR4-Khartoum-SuperRes/
 ├── README.md
 ├── LICENSE
+├── CITATION.cff
 ├── .gitignore
+├── docs/                                    # GitHub Pages interactive demo
+│   └── index.html
 ├── notebooks/
-│   ├── S2DR4_Khartoum_SuperRes.ipynb    # Main Colab inference notebook
-│   └── S2DR4T_infer_20260126.ipynb      # Reference notebook
+│   ├── S2DR4_Khartoum_SuperRes.ipynb        # Main Colab inference notebook
+│   └── S2DR4T_infer_20260126.ipynb          # Reference notebook
 ├── scripts/
-│   ├── run_s2dr4.py                     # WSL2 local inference runner
-│   ├── create_comparison.py             # Interactive HTML comparison builder
-│   ├── compare_results.py               # CLI data comparison
-│   └── inspect_data.py                  # GeoTIFF metadata inspector
+│   ├── run_s2dr4.py                         # WSL2 local inference runner
+│   ├── create_comparison.py                 # Interactive HTML comparison builder
+│   ├── compare_results.py                   # CLI data comparison
+│   └── inspect_data.py                      # GeoTIFF metadata inspector
 ├── gee/
-│   └── sentinel2_download.js            # Google Earth Engine export script
+│   └── sentinel2_download.js                # Google Earth Engine export script
 ├── setup/
-│   └── setup_wsl.sh                     # WSL2 environment setup
+│   └── setup_wsl.sh                         # WSL2 environment setup
 └── results/
-    ├── hero_comparison.jpg              # Full-area RGB comparison
-    ├── zoom_comparison.jpg              # Center crop zoom comparison
-    ├── falsecolor_comparison.jpg        # NIR false color comparison
-    ├── ndvi_comparison.jpg              # Vegetation index comparison
-    └── result.png                       # Quick-reference comparison
+    ├── hero_comparison.jpg                  # Full-area RGB comparison
+    ├── zoom_comparison.jpg                  # Center crop zoom comparison
+    ├── falsecolor_comparison.jpg            # NIR false color comparison
+    ├── ndvi_comparison.jpg                  # Vegetation index comparison
+    ├── before_after.gif                     # Animated crossfade comparison
+    ├── social_preview.jpg                   # Open Graph social preview
+    └── result.png                           # Quick-reference comparison
 ```
+
+## Citing This Work
+
+Click the **"Cite this repository"** button on GitHub, or use the [`CITATION.cff`](CITATION.cff) file directly.
 
 ## Credits
 

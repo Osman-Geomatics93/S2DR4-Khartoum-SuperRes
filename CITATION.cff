@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "S2DR4-Khartoum-SuperRes"
+message: "If you use this work, please cite it as below."
+type: software
+authors:
+  - family-names: Osman
+    alias: Osman-Geomatics93
+repository-code: "https://github.com/Osman-Geomatics93/S2DR4-Khartoum-SuperRes"
+license: MIT
+keywords:
+  - super-resolution
+  - sentinel-2
+  - remote-sensing
+  - deep-learning
+  - geospatial
+  - khartoum
+  - satellite-imagery
+abstract: >-
+  End-to-end workflow for 10x super-resolution of Sentinel-2 satellite
+  imagery (10 m to 1 m/pixel) over Khartoum, Sudan using Gamma Earth
+  S2DR4 deep learning. Includes data download via Google Earth Engine,
+  inference on Google Colab, and interactive comparison tools.
+date-released: "2026-02-04"
